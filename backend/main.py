@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-from backend.banco.conexao import engine
-from backend.banco.conexao import Base
+from backend.modelos import SKU  # noqa: F401
 
 app = FastAPI(
     title="Sistema de Planejamento PVD",
