@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from backend.api.planejamento import router as planejamento_router
+from backend.api.sku import router as sku_router
 from backend.modelos import SKU, Maquina, PlanoMensal, PlanoMensalItem, Carga, CargaItem, ProgramacaoDiaria, ProgramacaoDiariaItem  # noqa: F401
 
 app = FastAPI(
@@ -8,6 +9,7 @@ app = FastAPI(
     version="0.1.0"
 )
 
+app.include_router(sku_router)
 app.include_router(planejamento_router)
 
 

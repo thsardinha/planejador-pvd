@@ -38,3 +38,19 @@ Definição inicial das regras do gerador de cargas.
 4. Sobras de saldo deverão ser redistribuídas sempre que possível.
 5. Cada carga deverá respeitar o limite máximo de 50 peças.
 6. A prioridade do algoritmo será ocupar a carga antes de maximizar variedade.
+
+# DECISÃO 003
+
+Data:
+11/06/2026
+
+Responsável:
+Thiago Sardinha
+
+Descrição:
+
+A compatibilidade de carga será definida inicialmente pela combinação de revestimento e origem do material.
+
+A capacidade de cada carga não será fixada de forma definitiva nesta fase, pois depende da validação da engenharia sobre a quantidade de peças por gancheira para cada produto.
+
+Até a definição final, o sistema deverá permitir parametrização da capacidade.
