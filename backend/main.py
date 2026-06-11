@@ -1,11 +1,14 @@
 from fastapi import FastAPI
-from backend.modelos import SKU  # noqa: F401
+from backend.api.planejamento import router as planejamento_router
+from backend.modelos import SKU, Maquina, PlanoMensal, PlanoMensalItem, Carga, CargaItem, ProgramacaoDiaria, ProgramacaoDiariaItem  # noqa: F401
 
 app = FastAPI(
     title="Sistema de Planejamento PVD",
     description="API do Sistema de Planejamento PVD",
     version="0.1.0"
 )
+
+app.include_router(planejamento_router)
 
 
 @app.get("/")
