@@ -5,6 +5,9 @@ from backend.banco.conexao import obter_sessao
 from backend.esquemas.plano_mensal import PlanoMensalCriar
 from backend.servicos.servico_plano_mensal import salvar_plano_mensal
 from backend.servicos.servico_geracao_cargas import gerar_cargas_plano
+from backend.servicos.servico_diarizacao import (
+    gerar_programacao
+)
 
 router = APIRouter(prefix="/planejamento", tags=["Planejamento"])
 
@@ -44,3 +47,23 @@ def gerar_cargas(plano_id: int, db: Session = Depends(obter_sessao)):
         return gerar_cargas_plano(db, plano_id)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+    
+@router.post("/{plano_id}/gerar-programacao")
+def gerar_programacao_endpoint(
+    plano_id: int,
+    db: Session = Depends(obter_sessao)
+):
+
+    try:
+
+        return gerar_programacao(
+            db,
+            plano_id
+        )
+
+    except ValueError as e:
+
+        raise HTTPException(
+            status_code=400,
+            detail=str(e)
+        )
