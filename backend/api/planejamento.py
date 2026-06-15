@@ -4,10 +4,7 @@ from sqlalchemy.orm import Session
 from backend.banco.conexao import obter_sessao
 from backend.esquemas.plano_mensal import PlanoMensalCriar
 from backend.servicos.servico_plano_mensal import salvar_plano_mensal
-from backend.servicos.servico_geracao_cargas import (
-    gerar_cargas_plano
-)
-
+from backend.servicos.servico_geracao_cargas import gerar_cargas_plano
 
 router = APIRouter(prefix="/planejamento", tags=["Planejamento"])
 
@@ -39,35 +36,11 @@ def criar_plano_mensal(dados: PlanoMensalCriar, db: Session = Depends(obter_sess
 
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    
+
+
 @router.post("/{plano_id}/gerar-cargas")
-def gerar_cargas(
-    plano_id: int,
-    db: Session = Depends(obter_sessao)
-):
-
+def gerar_cargas(plano_id: int, db: Session = Depends(obter_sessao)):
     try:
-
-        cargas = gerar_cargas_plano(
-            db,
-            plano_id
-        )
-
-        return {
-            "total_cargas": len(cargas),
-            "cargas": [
-                {
-                    "familia": carga.familia,
-                    "quantidade_total": carga.quantidade_total,
-                    "minutagem_total": carga.minutagem_total
-                }
-                for carga in cargas
-            ]
-        }
-
+        return gerar_cargas_plano(db, plano_id)
     except ValueError as e:
-
-        raise HTTPException(
-            status_code=400,
-            detail=str(e)
-        )
+        raise HTTPException(status_code=400, detail=str(e))

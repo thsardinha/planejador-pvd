@@ -6,7 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 
 from backend.banco.base import Base
-from backend.modelos import SKU  # noqa: F401
+from backend.modelos import SKU, Maquina, PlanoMensal, PlanoMensalItem, Carga, CargaItem, ProgramacaoDiaria, ProgramacaoDiariaItem
 from backend.config import DATABASE_URL
 
 from sqlalchemy import create_engine

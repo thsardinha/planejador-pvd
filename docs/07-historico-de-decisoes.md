@@ -54,3 +54,22 @@ A compatibilidade de carga será definida inicialmente pela combinação de reve
 A capacidade de cada carga não será fixada de forma definitiva nesta fase, pois depende da validação da engenharia sobre a quantidade de peças por gancheira para cada produto.
 
 Até a definição final, o sistema deverá permitir parametrização da capacidade.
+
+# DECISÃO 004
+
+Data:
+11/06/2026
+
+Responsável:
+Thiago Sardinha
+
+Descrição:
+
+No diarizador, a prioridade será a ocupação das máquinas através da meta de cargas por dia.
+
+A minutagem será utilizada como indicador de acompanhamento e não como restrição principal da programação.
+
+Ordem de prioridade:
+
+1. Meta de cargas por máquina
+2. Minutagem diária
