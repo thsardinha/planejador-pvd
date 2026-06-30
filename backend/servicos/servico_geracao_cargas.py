@@ -1,5 +1,5 @@
-from backend.motor.agrupador_familias import AgrupadorFamilias
-from backend.motor.gerador_cargas import GeradorCargas
+from backend.dominio.regras.agrupador_familias import AgrupadorFamilias
+from backend.dominio.regras.gerador_cargas import GeradorCargas
 from backend.repositorios.plano_mensal_repositorio import obter_itens_plano_com_sku
 from backend.servicos.servico_cargas import salvar_cargas_geradas
 

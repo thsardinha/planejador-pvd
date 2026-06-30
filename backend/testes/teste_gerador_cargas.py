@@ -1,4 +1,4 @@
-from backend.motor.gerador_cargas import GeradorCargas
+from backend.dominio.regras.gerador_cargas import GeradorCargas
 
 
 def executar():

@@ -1,7 +1,7 @@
 from datetime import date
 from types import SimpleNamespace
 
-from backend.motor.diarizador import Diarizador
+from backend.dominio.regras.diarizador import Diarizador
 
 
 def executar():

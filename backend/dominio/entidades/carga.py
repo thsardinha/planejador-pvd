@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from backend.motor.entidades.item_carga import ItemCarga
+from backend.dominio.entidades.item_carga import ItemCarga
 
 
 @dataclass

@@ -1,4 +1,4 @@
-from backend.motor.agrupador_familias import AgrupadorFamilias
+from backend.dominio.regras.agrupador_familias import AgrupadorFamilias
 
 
 def executar():

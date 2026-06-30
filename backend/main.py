@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from backend.api.planejamento import router as planejamento_router
 from backend.api.sku import router as sku_router
 from backend.modelos import SKU, Maquina, PlanoMensal, PlanoMensalItem, Carga, CargaItem, ProgramacaoDiaria, ProgramacaoDiariaItem  # noqa: F401
+from backend.api.programacao import router as programacao_router
+from backend.api.maquinas import router as maquinas_router
 
 app = FastAPI(
     title="Sistema de Planejamento PVD",
@@ -11,7 +13,8 @@ app = FastAPI(
 
 app.include_router(sku_router)
 app.include_router(planejamento_router)
-
+app.include_router(programacao_router)
+app.include_router(maquinas_router)
 
 @app.get("/")
 def home():

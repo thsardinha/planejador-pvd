@@ -1,5 +1,5 @@
-from backend.motor.entidades.carga import Carga
-from backend.motor.entidades.item_carga import ItemCarga
+from backend.dominio.entidades.carga import Carga
+from backend.dominio.entidades.item_carga import ItemCarga
 
 
 class GeradorCargas:

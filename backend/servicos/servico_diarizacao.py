@@ -1,6 +1,6 @@
 from datetime import date
 
-from backend.motor.diarizador import Diarizador
+from backend.dominio.regras.diarizador import Diarizador
 
 from backend.repositorios.cargas_repositorio import (
     listar_cargas_por_plano

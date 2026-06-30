@@ -1,6 +1,6 @@
 from datetime import date, timedelta
 
-from backend.motor.entidades.programacao import Programacao
+from backend.dominio.entidades.programacao import Programacao
 
 
 class Diarizador:
